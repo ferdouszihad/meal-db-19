@@ -19,10 +19,11 @@ function App() {
 
   return (
     <>
-      <h2 className="py-1 bg-base-200 text-center">
-        You have got {counter}% discount
-      </h2>
-      <Navbar setSearchVal={setSearchVal} setCounter={setCounter}></Navbar>
+      <Navbar
+        counter={counter}
+        setSearchVal={setSearchVal}
+        setCounter={setCounter}
+      ></Navbar>
       <div className="grid grid-cols-12 gap-5 w-11/12 mx-auto py-10">
         <div className="col-span-3 h-screen overflow-x-scroll">
           <h2 className="text-2xl font-bold text-center sticky top-0 bg-white bg-opacity-50">
@@ -33,6 +34,7 @@ function App() {
               activeCat={activeCat}
               setActiveCat={setActiveCat}
               categories={categories}
+              setSearchVal={setSearchVal}
             ></Categories>
           </Suspense>
         </div>

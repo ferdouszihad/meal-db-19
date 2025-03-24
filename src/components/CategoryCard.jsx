@@ -1,7 +1,10 @@
-const CategoryCard = ({ cat, activeCat, setActiveCat }) => {
+const CategoryCard = ({ cat, activeCat, setActiveCat, setSearchVal }) => {
   return (
     <div
-      onClick={() => setActiveCat(cat.strCategory)}
+      onClick={() => {
+        setActiveCat(cat.strCategory);
+        setSearchVal("");
+      }}
       className={`flex cursor-pointer duration-300 hover:bg-base-200 hover:shadow-xl items-center justify-between rounded-xl  gap-2 shadow px-5 py-2 ${
         activeCat == cat.strCategory && "bg-primary"
       } `}

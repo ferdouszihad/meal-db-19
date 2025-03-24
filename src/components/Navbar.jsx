@@ -1,6 +1,9 @@
-const Navbar = ({ setCounter, setSearchVal }) => {
+const Navbar = ({ counter, setCounter, setSearchVal }) => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
+      <h2 className="py-1 bg-base-200 text-center">
+        You have got {counter}% discount
+      </h2>
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">Recipie Hub</a>
       </div>
